@@ -1,0 +1,11 @@
+﻿  image_handler.cpp
+C:\Users\tommi\OneDrive\Documenti\MEGAsync\Universita\Magistrale\Corsi\GPU Computing\Proj\SeamCarvingCPU\seam_carving.h(2,10): warning C4067: token imprevisti dopo una direttiva per il preprocessore. Previsto un carattere di nuova riga
+  main.cpp
+C:\Users\tommi\OneDrive\Documenti\MEGAsync\Universita\Magistrale\Corsi\GPU Computing\Proj\SeamCarvingCPU\seam_carving.h(2,10): warning C4067: token imprevisti dopo una direttiva per il preprocessore. Previsto un carattere di nuova riga
+  seam_carving.cpp
+C:\Users\tommi\OneDrive\Documenti\MEGAsync\Universita\Magistrale\Corsi\GPU Computing\Proj\SeamCarvingCPU\seam_carving.h(2,10): warning C4067: token imprevisti dopo una direttiva per il preprocessore. Previsto un carattere di nuova riga
+C:\Users\tommi\OneDrive\Documenti\MEGAsync\Universita\Magistrale\Corsi\GPU Computing\Proj\SeamCarvingCPU\seam_carving.cpp(104,22): warning C4244: '=': conversione da 'double' a 'float'. Possibile perdita di dati.
+  utils.cpp
+C:\Users\tommi\OneDrive\Documenti\MEGAsync\Universita\Magistrale\Corsi\GPU Computing\Proj\SeamCarvingCPU\seam_carving.h(2,10): warning C4067: token imprevisti dopo una direttiva per il preprocessore. Previsto un carattere di nuova riga
+  Generazione del codice in corso...
+  SeamCarvingCPU.vcxproj -> C:\Users\tommi\OneDrive\Documenti\MEGAsync\Universita\Magistrale\Corsi\GPU Computing\Proj\SeamCarving\x64\bigCPU\SeamCarvingCPU.exe
