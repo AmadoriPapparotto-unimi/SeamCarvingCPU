@@ -13,7 +13,7 @@
 void grayValue(energyPixel_t* energyPixel, pel_t r, pel_t g, pel_t b, int id) {
 	int grayVal = (r + g + b) / 3;
 	energyPixel->color = grayVal;
-	energyPixel->idPixel = id;
+	energyPixel->id_pixel = id;
 }
 
 void toGrayScale(pixel_t* img, energyPixel_t* imgGray, imgProp_t* imgProp) {

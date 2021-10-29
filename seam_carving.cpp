@@ -187,20 +187,20 @@ void removePixel(int idPixel, energyPixel_t* energyImg, int* idsToRemove, imgPro
 
 	newImageGray[newPosition].energy = energyImg[idPixel].energy;
 	newImageGray[newPosition].color = energyImg[idPixel].color;
-	newImageGray[newPosition].idPixel = energyImg[idPixel].idPixel;
+	newImageGray[newPosition].id_pixel = energyImg[idPixel].id_pixel;
 
 }
 
 void updateImageGray(int idPixel, energyPixel_t* imgGray, energyPixel_t* imgWithoutSeamGray, imgProp_t* imgProp) {
 	imgGray[idPixel].color = imgWithoutSeamGray[idPixel].color;
-	imgGray[idPixel].idPixel = imgWithoutSeamGray[idPixel].idPixel;
+	imgGray[idPixel].id_pixel = imgWithoutSeamGray[idPixel].id_pixel;
 }
 
 void removePixelsFromSrc(pixel_t* imgSrc, pixel_t* newImgSrc, energyPixel_t* imgGray, imgProp_t* imgProp) {
 	for (int i = 0; i < imgProp->imageSize; i++) {
-		newImgSrc[i].R = imgSrc[imgGray[i].idPixel].R;
-		newImgSrc[i].G = imgSrc[imgGray[i].idPixel].G;
-		newImgSrc[i].B = imgSrc[imgGray[i].idPixel].B;
+		newImgSrc[i].R = imgSrc[imgGray[i].id_pixel].R;
+		newImgSrc[i].G = imgSrc[imgGray[i].id_pixel].G;
+		newImgSrc[i].B = imgSrc[imgGray[i].id_pixel].B;
 	}
 }
 

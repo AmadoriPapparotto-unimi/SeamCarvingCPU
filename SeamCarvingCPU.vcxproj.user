@@ -5,11 +5,11 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='castleCPU|x64'">
-    <LocalDebuggerCommandArguments>"src\assets\images\big.bmp" 5</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>"src\assets\images\castle_bmp.bmp" 20</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='bigCPU|x64'">
-    <LocalDebuggerCommandArguments>"src\assets\images\castle_bmp.bmp" 100</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>"src\assets\images\big.bmp" 5</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

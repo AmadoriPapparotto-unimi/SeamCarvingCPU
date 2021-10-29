@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <sys\timeb.h> 
 
 char* src_path;
 
@@ -49,20 +50,24 @@ void applySeamCarving(char* p, int iterations) {
 	for (int i = 0; i < numBlocks; i++)
 		minSeamsPerBlock[i].ids = (int*) malloc(imgProp->height * sizeof(int));
 
-	imgWithoutSeamGray = (energyPixel_t*) malloc(imgProp->imageSize * sizeof(energyPixel_t));
-
 	readBMP(f, imgSrc, imgProp);
+
+	struct timeb start, end;
+	ftime(&start);
 	toGrayScale(imgSrc, imgGray, imgProp);
 
 	for (int i = 0; i < iterations; i++) {
 		energyMap(imgGray, imgProp);		
 		findSeams(imgGray, imgSrc, imgProp, minSeam, seams);
 		removeSeam(imgGray, imgWithoutSeamGray, minSeam, imgProp);
-		printf("ITERAZIONE %d COMPLETATA\n", i);
+		//printf("ITERAZIONE %d COMPLETATA\n", i);
 	}
 
 	removePixelsFromSrc(imgSrc, imgWithoutSeamSrc, imgGray, imgProp);
-
+	ftime(&end);
+	int diff = (int)(1000.0 * (end.time - start.time)
+		+ (end.millitm - start.millitm));;
+	printf("\nOperation took %u milliseconds\n", diff);
 	setBMP_header(imgProp, 0, imgProp->width);
 	writeBMP_pixel((char*)"C:\\aa\\reducedcpu.bmp", imgWithoutSeamSrc, imgProp);
 
@@ -73,7 +78,7 @@ int main(int argc, char** argv) {
 
 	char* path = argv[1];
 	int iterations = atoi(argv[2]);
-	printf("CPUUUUUUUUU\n");
+
 	applySeamCarving(path, iterations);
 
 	return 0;

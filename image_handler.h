@@ -21,7 +21,7 @@ typedef struct PixelStruct {
 } pixel_t;
 
 typedef struct EnergyPixelStruct {
-	long long idPixel; //idOriginale dell'immagine iniziale
+	long long id_pixel; //idOriginale dell'immagine iniziale
 	float energy;
 	pel_t color;
 } energyPixel_t;
